@@ -29,12 +29,16 @@ if [ "$#" -ne 3 ]; then
 fi
 
 # Assign the filter value, output file, and input file to variables
-filterBy="\$1"
-output_file="\$2"
-input_file="\$3"
+filterBy="$1"
+output_file="$2"
+input_file="$3"
 
 # Clear the output file if it exists
 >"$output_file"
+
+echo "Filter By: $filterBy"
+echo "Input file: $input_file"
+echo "Output file: $output_file"
 
 # Read the input file line by line
 while IFS= read -r line; do
